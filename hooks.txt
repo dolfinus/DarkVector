@@ -1,0 +1,6 @@
+Hooks provided by the DarkVector skin.
+
+'SkinDarkVectorStyleModules': Called when defining the list of module styles to be
+loaded by the DarkVector skin.
+$skin: SkinDarkVector object
+&$styles: Array of module names whose style will be loaded for the skin

@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Malvineous",
+			"Martynov Maxim"
+		]
+	},
+	"skinname-darkvector": "DarkVector",
+	"darkvector-skin-desc": "Vector skin with dark interface",
+	"darkvector.css": "/* CSS placed here will affect users of the DarkVector skin */",
+	"darkvector.js": "/* Any JavaScript here will be loaded for users using the DarkVector skin */",
+	"darkvector-action-addsection": "Add topic",
+	"darkvector-action-delete": "Delete",
+	"darkvector-action-move": "Move",
+	"darkvector-action-protect": "Protect",
+	"darkvector-action-undelete": "Undelete",
+	"darkvector-action-unprotect": "Change protection",
+	"darkvector-view-create": "Create",
+	"darkvector-view-edit": "Edit",
+	"darkvector-view-history": "View history",
+	"darkvector-view-view": "Read",
+	"darkvector-view-viewsource": "View source",
+	"darkvector-more-actions": "More"
+}

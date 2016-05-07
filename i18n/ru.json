@@ -1,0 +1,24 @@
+{
+	"@metadata": {
+		"authors": [
+			"Malvineous",
+			"Martynov Maxim"
+		]
+	},
+	"skinname-darkvector": "Векторное темное",
+	"darkvector-skin-desc": "Векторная тема с темным интерфейсом",
+	"darkvector.css": "/* Размещённый здесь CSS будет применяться к векторной теме оформления  */",
+	"darkvector.js": "/* Размещённый здесь код JavaScript будет загружаться пользователям, использующим тему оформления DarkVector */",
+	"darkvector-action-addsection": "Добавить тему",
+	"darkvector-action-delete": "Удалить",
+	"darkvector-action-move": "Переименовать",
+	"darkvector-action-protect": "Защитить",
+	"darkvector-action-undelete": "Восстановить",
+	"darkvector-action-unprotect": "Изменить защиту",
+	"darkvector-view-create": "Создать",
+	"darkvector-view-edit": "Править",
+	"darkvector-view-history": "История",
+	"darkvector-view-view": "Читать",
+	"darkvector-view-viewsource": "Просмотр разметки",
+	"darkvector-more-actions": "Ещё"
+}

@@ -1,0 +1,46 @@
+{
+	"name": "mediawiki/darkvector-skin",
+	"type": "mediawiki-skin",
+	"description": "Vector skin with dark interface",
+	"keywords": [
+		"wiki",
+		"MediaWiki",
+		"skin"
+	],
+	"homepage": "https://www.mediawiki.org/wiki/Skin:DarkVector",
+	"license": "GPL-2.0+",
+	"authors": [
+		{
+			"name": "Malvineous"
+		},
+		{
+			"name": "Martynov Maxim"
+		}
+	],
+	"support": {
+		"wiki": "https://www.mediawiki.org/wiki/Skin:DarkVector",
+		"forum": "https://www.mediawiki.org/wiki/Skin_talk:DarkVector",
+		"source": "https://git.wikimedia.org/summary/mediawiki%2Fskins%2FDarkVector",
+		"irc": "irc://irc.freenode.org/mediawiki"
+	},
+	"require": {
+		"php": ">=5.3.3",
+		"composer/installers": ">1.0.12"
+	},
+	"extra": {
+		"branch-alias": {
+			"dev-master": "1.x-dev"
+		}
+	},
+	"require-dev": {
+		"jakub-onderka/php-parallel-lint": "0.9.*",
+		"mediawiki/mediawiki-codesniffer": "0.3.0"
+	},
+	"scripts": {
+		"test": [
+			"parallel-lint . --exclude vendor",
+			"phpcs -p"
+		]
+	}
+
+}
