@@ -1,0 +1,25 @@
+{
+	"@metadata": {
+		"authors": [
+			"Malvineous",
+			"Martynov Maxim"
+		]
+	},
+	"skinname-darkvector": "DarkVector",
+	"darkvector-skin-desc": "Stellt eine modernisierte Benutzeroberfläche bereit",
+	"darkvector.css": "/* Das folgende CSS wird für Benutzer der darkvector-Benutzeroberfläche geladen. */",
+	"darkvector.js": "/* Das folgende JavaScript wird für Benutzer der darkvector-Benutzeroberfläche geladen. */",
+	"darkvector-action-addsection": "Abschnitt hinzufügen",
+	"darkvector-action-delete": "Löschen",
+	"darkvector-action-move": "Verschieben",
+	"darkvector-action-protect": "Schützen",
+	"darkvector-action-undelete": "Wiederherstellen",
+	"darkvector-action-unprotect": "Seitenschutz ändern",
+	"darkvector-view-create": "Erstellen",
+	"darkvector-view-edit": "Bearbeiten",
+	"darkvector-view-history": "Versionsgeschichte",
+	"darkvector-view-view": "Lesen",
+	"darkvector-view-viewsource": "Quelltext anzeigen",
+	"darkvector-more-actions": "Mehr"
+}
+
