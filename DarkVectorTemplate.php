@@ -60,7 +60,7 @@ class DarkVectorTemplate extends BaseTemplate {
 				$xmlID = isset( $link['id'] ) ? $link['id'] : 'ca-' . $xmlID;
 				$nav[$section][$key]['attributes'] =
 					' id="' . Sanitizer::escapeId( $xmlID ) . '"';
-				if ( $link['class'] ) {
+				if ( isset( $link['class'] ) && $link['class'] ) {
 					$nav[$section][$key]['attributes'] .=
 						' class="' . htmlspecialchars( $link['class'] ) . '"';
 					unset( $nav[$section][$key]['class'] );
@@ -115,7 +115,7 @@ class DarkVectorTemplate extends BaseTemplate {
 			if ( $this->data['title'] != '' ) {
 			?>
 			<h1 id="firstHeading" class="firstHeading" lang="<?php $this->text( 'pageLanguage' ); ?>"><?php
-				 $this->html( 'title' )
+				$this->html( 'title' )
 			?></h1>
 			<?php
 			} ?>
