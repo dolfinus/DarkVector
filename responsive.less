@@ -4,14 +4,14 @@
 	left for it.
 */
 
-div#mw-head {
+#mw-head {
 	position: static !important;
 	margin-top: 0.5em;
 }
 
 /* Move the panel to the bottom and display it as in-line lists */
-div#mw-navigation {
-	div#mw-panel {
+#mw-navigation {
+	#mw-panel {
 		display: table;
 		position: static;
 		table-layout: fixed;
@@ -31,15 +31,15 @@ div#mw-navigation {
 }
 
 /* Hide the logo and tabs */
-div#p-logo,
-div#left-navigation,
-div#p-cactions,
-div#p-views {
+#p-logo,
+#left-navigation,
+#p-cactions,
+#p-views {
 	display: none;
 }
 
 /* Rearrange various page elements to fill the now-available space */
-body div#footer {
+body #footer {
 	margin-left: 0;
 	padding-top: 0;
 
@@ -49,7 +49,7 @@ body div#footer {
 		display: none;
 	}
 }
-div#p-personal {
+#p-personal {
 	display: table;
 	position: relative;
 	width: 100%;
@@ -61,17 +61,17 @@ div#p-personal {
 		padding-left: 0;
 	}
 }
-div#right-navigation {
+#right-navigation {
 	max-width: 500px;
 	position: absolute;
 	top: inherit;
 	margin-top: -1px;
 	float: none;
 }
-div#p-search {
+#p-search {
 	margin-left: 73px;
 }
-div#content {
+#content {
 	/* Hide the 1px blue border on the left side */
 	border-left: 0;
 	margin-left: 0;
