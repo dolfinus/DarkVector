@@ -59,7 +59,7 @@ class DarkVectorTemplate extends BaseTemplate {
 
 				$xmlID = isset( $link['id'] ) ? $link['id'] : 'ca-' . $xmlID;
 				$nav[$section][$key]['attributes'] =
-					' id="' . Sanitizer::escapeId( $xmlID ) . '"';
+					' id="' . Sanitizer::escapeIdForAttribute( $xmlID ) . '"';
 				if ( isset( $link['class'] ) && $link['class'] ) {
 					$nav[$section][$key]['attributes'] .=
 						' class="' . htmlspecialchars( $link['class'] ) . '"';
@@ -271,7 +271,7 @@ class DarkVectorTemplate extends BaseTemplate {
 				case 'SEARCH':
 					break;
 				case 'TOOLBOX':
-					$this->renderPortal( 'tb', $this->getToolbox(), 'toolbox', 'SkinTemplateToolboxEnd' );
+					$this->renderPortal( 'tb', $this->data['sidebar']['TOOLBOX'], 'toolbox', 'SkinTemplateToolboxEnd' );
 					break;
 				case 'LANGUAGES':
 					if ( $this->data['language_urls'] !== false ) {
@@ -296,10 +296,10 @@ class DarkVectorTemplate extends BaseTemplate {
 			$msg = $name;
 		}
 		$msgObj = wfMessage( $msg );
-		$labelId = Sanitizer::escapeId( "p-$name-label" );
+		$labelId = Sanitizer::escapeIdForAttribute( "p-$name-label" );
 		?>
 		<div class="portal" role="navigation" id='<?php
-		echo Sanitizer::escapeId( "p-$name" )
+		echo Sanitizer::escapeIdForAttribute( "p-$name" )
 		?>'<?php
 		echo Linker::tooltip( 'p-' . $name )
 		?> aria-labelledby='<?php echo $labelId ?>'>
