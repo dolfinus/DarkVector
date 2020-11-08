@@ -296,10 +296,10 @@ class DarkVectorTemplate extends BaseTemplate {
 			$msg = $name;
 		}
 		$msgObj = wfMessage( $msg );
-		$labelId = Sanitizer::escapeId( "p-$name-label" );
+		$labelId = Sanitizer::escapeIdForAttribute( "p-$name-label" );
 		?>
 		<div class="portal" role="navigation" id='<?php
-		echo Sanitizer::escapeId( "p-$name" )
+		echo Sanitizer::escapeIdForAttribute( "p-$name" )
 		?>'<?php
 		echo Linker::tooltip( 'p-' . $name )
 		?> aria-labelledby='<?php echo $labelId ?>'>
