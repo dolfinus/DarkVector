@@ -67,14 +67,15 @@ class SkinDarkVector extends SkinTemplate {
 
 	/**
 	 * Loads skin and user CSS files.
-	 * @param OutputPage $out
+	 * @return array Array of modules with helper keys for easy overriding
 	 */
-	function setupSkinUserCss( OutputPage $out ) {
-		parent::setupSkinUserCss( $out );
+	function getDefaultModules() {
+		$modules = parent::getDefaultModules();
 
 		$styles = array( 'mediawiki.skinning.interface', 'skins.darkvector.styles' );
 		Hooks::run( 'SkinDarkVectorStyleModules', array( $this, &$styles ) );
-		$out->addModuleStyles( $styles );
+		$modules['styles']['skin'] = $styles;
+		return $modules;
 	}
 
 	/**
