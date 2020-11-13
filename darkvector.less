@@ -25,7 +25,8 @@ hr {
 }
 
 pre,
-.mw-code {
+.mw-code,
+.wikiEditor-ui-toolbar {
     color: #ccc !important;
     background-color: #4C4C4C !important;
     border: none;
@@ -43,6 +44,38 @@ pre,
     color: #a8a8a8;
     background-color: #333;
     border-color: #4c4c4c;
+}
+
+.oo-ui-tabOptionWidget,
+.oo-ui-tabSelectWidget-framed {
+    color: #e69710 !important;
+}
+
+.oo-ui-menuOptionWidget,
+.oo-ui-dropdownWidget.oo-ui-widget-enabled .oo-ui-dropdownWidget-handle {
+    color: #a8a8a8 !important;
+}
+
+.oo-ui-tabSelectWidget-framed,
+.oo-ui-dropdownWidget.oo-ui-widget-enabled .oo-ui-dropdownWidget-handle,
+.oo-ui-menuSelectWidget {
+    background-color: #4c4c4c !important;
+}
+
+.oo-ui-tabSelectWidget-framed,
+.oo-ui-dropdownWidget.oo-ui-widget-enabled .oo-ui-dropdownWidget-handle {
+    border-color: #4c4c4c !important;
+}
+
+.oo-ui-dropdownWidget.oo-ui-widget-enabled .oo-ui-dropdownWidget-handle:hover,
+.oo-ui-tabSelectWidget-framed .oo-ui-tabOptionWidget.oo-ui-optionWidget-selected,
+.oo-ui-menuOptionWidget.oo-ui-optionWidget-selected,
+.oo-ui-menuOptionWidget.oo-ui-optionWidget-highlighted {
+    background-color: #606060 !important;
+    border-color: #4c4c4c !important;
+}
+.oo-ui-tabSelectWidget-framed .oo-ui-tabOptionWidget.oo-ui-optionWidget-selected .oo-ui-labelElement-label {
+    border-bottom-color: transparent !important;
 }
 
 input,
@@ -98,7 +131,7 @@ textarea {
     background-position: center center !important;
 }
 
-.mw-mmv-post-image,.mw-mmv-image-metadata {
+.mw-mmv-post-image,.mw-mmv-image-metadata{
     background-color: #4c4c4c !important;
 }
 
@@ -111,7 +144,8 @@ textarea {
     color: #fff !important;
 }
 
-.mw-mmv-options-dialog-header {
+.mw-mmv-options-dialog-header,
+.mw-rcfilters-ui-filterTagMultiselectWidget-wrapper-content-title {
     color: #ccc !important;
 }
 
@@ -120,7 +154,8 @@ textarea {
     color: #999 !important;
 }
 
-.mw-mmv-dialog .mw-mmv-dialog-down-arrow {
+.mw-mmv-dialog .mw-mmv-dialog-down-arrow,
+.oo-ui-tagItemWidget.oo-ui-widget-enabled  {
     background-color: #aaa !important;
 }
 
@@ -242,6 +277,7 @@ div#simpleSearch {
 
 .oo-ui-textInputWidget input,
 .oo-ui-textInputWidget textarea,
+.oo-ui-tagMultiselectWidget-handle,
 div#simpleSearch #searchInput {
     background-color: #4C4C4C !important;
     color: #C1C1C1 !important;
@@ -266,7 +302,6 @@ div#simpleSearch #searchButton {
 .oo-ui-buttonElement-button:hover,
 .mw-ui-button:hover {
     color: #ffffff !important;
-    ;
     background-color: #D28A0D !important;
     border-color: #D28A0D !important;
 }
@@ -1229,8 +1264,8 @@ color:#db8200
     color: #db8200
 }
 .mw-changeslist-legend {
-     color: #a9a9a9;
-     background-color: #404040
+    color: #a9a9a9;
+    background-color: #404040
 }
 ol.references li:target { 
     background-color: #663300 
@@ -1247,7 +1282,7 @@ sup.reference:target {
 .catlinks {
     background-color: #393939
 }
-.mw-createacct-benefits-list p{
+.mw-createacct-benefits-list p {
     color: #c9c9c9
 }
 div#mw-panel div.portal div.body ul li a:visited{color:#db8200}
