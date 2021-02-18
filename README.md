@@ -10,3 +10,13 @@ Download the latest snapshot and extract it to your skins directory. Then includ
 ```php
 wfLoadSkin( 'DarkVector' );
 ```
+
+# Custom CSS and JS
+
+You can edit these pages:
+* MediaWiki:Darkvector.css
+* MediaWiki:Darkvector.js
+
+to add style specific styles and scripts.
+
+**Please pay attention to a fact that skin name in these pages names is "Darkvector", not "DarkVector"**
