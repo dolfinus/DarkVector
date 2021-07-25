@@ -212,7 +212,15 @@ class DarkVectorTemplate extends BaseTemplate {
 			<?php
 			}
 			?>
-			<?php $footericons = $this->getFooterIcons( "icononly" );
+			<?php
+            $footericons = $this->get('footericons');
+            foreach ( $footericons as $footerIconsKey => &$footerIconsBlock ) {
+                foreach ( $footerIconsBlock as $footerIconKey => $footerIcon ) {
+                    if ( !isset( $footerIcon['src'] ) ) {
+                        unset( $footerIconsBlock[$footerIconKey] );
+                    }
+                }
+            }
 			if ( count( $footericons ) > 0 ) {
 				?>
 				<ul id="footer-icons" class="noprint">
