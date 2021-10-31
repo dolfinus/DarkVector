@@ -38,7 +38,19 @@ class DarkVectorTemplate extends BaseTemplate {
 		$nav = $this->data['content_navigation'];
 
 		if ( $this->config->get( 'DarkVectorUseIconWatch' ) ) {
-			$mode = $this->getSkin()->getUser()->isWatched( $this->getSkin()->getRelevantTitle() )
+			$user = $this->getSkin()->getUser();
+			$relevantTitle = $this->getSkin()->getRelevantTitle();
+			$isWatched = false;
+			if ( method_exists( $user, 'isWatched' ) ) {
+				$isWatched = $user->isWatched( $relevantTitle );
+			} else {
+				$instance = MediaWiki\MediaWikiServices::getInstance();
+				$isWatched = $instance->getWatchedItemStore()->isWatched(
+					$user,
+					$relevantTitle
+				);
+			}
+			$mode = $isWatched
 				? 'unwatch'
 				: 'watch';
 
@@ -334,7 +346,12 @@ class DarkVectorTemplate extends BaseTemplate {
 					echo $content; /* Allow raw HTML block to be defined by extensions */
 				}
 
-				$this->renderAfterPortlet( $name );
+				$skin = $this->getSkin();
+				if ( method_exists( $skin, 'getAfterPortlet' ) ) {
+					echo $skin->getAfterPortlet( $name );
+				} else {
+					$this->renderAfterPortlet( $name );
+				}
 				?>
 			</div>
 		</div>
