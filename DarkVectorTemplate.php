@@ -45,7 +45,7 @@ class DarkVectorTemplate extends BaseTemplate {
 				$isWatched = $user->isWatched( $relevantTitle );
 			} else {
 				$instance = MediaWiki\MediaWikiServices::getInstance();
-				$isWatched = $instance->getWatchedItemStore()->isWatched(
+				$isWatched = $instance->getWatchlistManager()->isWatched(
 					$user,
 					$relevantTitle
 				);
