@@ -105,7 +105,6 @@ class DarkVectorTemplate extends BaseTemplate {
 			$this->getSkin()->getTitle()->getPageViewLanguage()->getHtmlCode();
 
 		// Output HTML Page
-		$this->html( 'headelement' );
 		?>
 		<div id="mw-page-base" class="noprint"></div>
 		<div id="mw-head-base" class="noprint"></div>
@@ -255,10 +254,6 @@ class DarkVectorTemplate extends BaseTemplate {
 			?>
 			<div style="clear:both"></div>
 		</div>
-		<?php $this->printTrail(); ?>
-
-	</body>
-</html>
 <?php
 	}
 

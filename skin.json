@@ -27,6 +27,20 @@
 	"@note": "When modifying skins.darkvector.styles definition, make sure the installer still works",
 	"ResourceModules": {
 		"skins.darkvector.styles": {
+			"class": "ResourceLoaderSkinModule",
+			"features": {
+				"content-links": true,
+				"content-media": true,
+				"interface-message-box": true,
+				"interface-category": true,
+				"content-tables": true,
+				"i18n-ordered-lists": true,
+				"i18n-all-lists-margins": true,
+				"i18n-headings": true,
+				"elements": true,
+				"interface": true,
+				"logo": true
+			},
 			"position": "top",
 			"styles": {
 				"screen.less": {
@@ -52,8 +66,7 @@
 			],
 			"position": "top",
 			"dependencies": [
-				"jquery.throttle-debounce",
-				"jquery.tabIndex"
+				"mediawiki.util"
 			]
 		}
 	},
