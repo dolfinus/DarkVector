@@ -16,7 +16,7 @@
         if (!$.collapsibleTabs.boundEvent) {
             $(window).on(
                 "resize",
-                $.debounce(500, function () {
+                mw.util.debounce(500, function () {
                     $.collapsibleTabs.handleResize();
                 })
             );
