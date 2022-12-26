@@ -1,6 +1,6 @@
 # [DarkVector](https://www.mediawiki.org/wiki/Skin:DarkVector)
 
-## SEARCHING FOR MAINTAINER
+## !!SEARCHING FOR MAINTAINER!!
 
 I've switched to [Citizen](https://www.mediawiki.org/wiki/Skin:Citizen) skin.
 This repo is not maintained. If you want to become a maintainer, please contact me.
