@@ -22,6 +22,8 @@
  * @ingroup Skins
  */
 
+use MediaWiki\MediaWikiServices;
+
 /**
  * QuickTemplate class for DarkVector skin
  * @ingroup Skins
@@ -44,7 +46,7 @@ class DarkVectorTemplate extends BaseTemplate {
 			if ( method_exists( $user, 'isWatched' ) ) {
 				$isWatched = $user->isWatched( $relevantTitle );
 			} else {
-				$instance = MediaWiki\MediaWikiServices::getInstance();
+				$instance = MediaWikiServices::getInstance();
 				$isWatched = $instance->getWatchlistManager()->isWatched(
 					$user,
 					$relevantTitle
@@ -332,7 +334,8 @@ class DarkVectorTemplate extends BaseTemplate {
 							echo $this->makeListItem( $key, $val );
 						}
 						if ( $hook !== null ) {
-							Hooks::run( $hook, array( &$this, true ) );
+							$hookContainer = MediaWikiServices::getInstance()->getHookContainer();
+							$hookContainer->run( $hook, [ &$this, true ] );
 						}
 						?>
 					</ul>
