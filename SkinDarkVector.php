@@ -22,6 +22,8 @@
  * @ingroup Skins
  */
 
+use MediaWiki\MediaWikiServices;
+
 /**
  * SkinTemplate class for DarkVector skin
  * @ingroup Skins
@@ -35,9 +37,9 @@ class SkinDarkVector extends SkinTemplate {
 	 */
 	private $darkvectorConfig;
 
-	public function __construct( $options = [] ) {
+	public function __construct( $options ) {
+		$this->darkvectorConfig = MediaWikiServices::getInstance()->getConfigFactory()->makeConfig( 'darkvector' );
 		$options['bodyOnly'] = true;
-		$this->darkvectorConfig = ConfigFactory::getDefaultInstance()->makeConfig( 'darkvector' );
 		parent::__construct( $options );
 	}
 
@@ -74,8 +76,9 @@ class SkinDarkVector extends SkinTemplate {
 	public function getDefaultModules() {
 		$modules = parent::getDefaultModules();
 
-		$styles = array( 'skins.darkvector.styles' );
-		Hooks::run( 'SkinDarkVectorStyleModules', array( $this, &$styles ) );
+		$styles = array( 'mediawiki.skinning.interface', 'skins.darkvector.styles' );
+    $hookContainer = MediaWikiServices::getInstance()->getHookContainer();
+		$hookContainer->run( 'SkinDarkVectorStyleModules', array( $this, &$styles ) );
 		$modules['styles']['skin'] = $styles;
 		return $modules;
 	}

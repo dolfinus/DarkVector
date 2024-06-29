@@ -1,4 +1,10 @@
 # [DarkVector](https://www.mediawiki.org/wiki/Skin:DarkVector)
+
+## !!SEARCHING FOR MAINTAINER!!
+
+I've switched to [Citizen](https://www.mediawiki.org/wiki/Skin:Citizen) skin.
+This repo is not maintained. If you want to become a maintainer, please contact me.
+
 ## Description
 DarkVector is a skin for MediaWiki like default [Vector](https://www.mediawiki.org/wiki/Skin:Vector) skin, but dark-colored.
 

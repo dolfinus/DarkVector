@@ -12,6 +12,9 @@
 	"ConfigRegistry": {
 		"darkvector": "GlobalVarConfig::newInstance"
 	},
+	"requires": {
+		"MediaWiki": ">= 1.39.0"
+	},
 	"ValidSkinNames": {
 		"darkvector": "DarkVector"
 	},
