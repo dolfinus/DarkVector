@@ -77,7 +77,8 @@ class SkinDarkVector extends SkinTemplate {
 		$modules = parent::getDefaultModules();
 
 		$styles = array( 'mediawiki.skinning.interface', 'skins.darkvector.styles' );
-		$this->getHookContainer()->run( 'SkinDarkVectorStyleModules', array( $this, &$styles ) );
+    $hookContainer = MediaWikiServices::getInstance()->getHookContainer();
+		$hookContainer->run( 'SkinDarkVectorStyleModules', array( $this, &$styles ) );
 		$modules['styles']['skin'] = $styles;
 		return $modules;
 	}
